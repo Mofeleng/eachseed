@@ -3,3 +3,17 @@
 All the image files are in the public folder. You can access them by using /filename.extension
 Use concepts of the box model when designing the frontend.
 Code inside the section elements.
+
+
+**IMPORTANT**
+Always code in a separate branch, call it local_development_yourname
+create it by typing this in your terminal:
+    git checkout -b local_development_thabo
+
+also you can switch between branches by using:
+    git checkout branchname
+
+after you're done making changing, push them to the repo by using:
+    git add .
+    git commit -m "What changes you made"
+    git push -u origin local_development_thabo
