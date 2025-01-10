@@ -2,8 +2,6 @@ import Image from "next/image";
 import CustomHeading from "@/components/heading";
 import { howItWorksArray } from "@/constants";
 import IconCard from "@/components/iconCard";
-import { ContainerScroll } from "@/components/ui/containerScrollAnimation";
-
 
 export default function Home() {
 
