@@ -7,7 +7,7 @@ const CustomHeading = ({ heading, paragraph }: {heading: string, paragraph: stri
   return (
     <>
         <h1 className={`${bayon.className} text-8xl`}>{heading}</h1>
-        <p className='mt-4'>{ paragraph }</p>
+        <p className='mt-4 text-xl'>{ paragraph }</p>
     </>
   )
 }

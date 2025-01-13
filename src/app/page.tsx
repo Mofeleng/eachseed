@@ -1,7 +1,10 @@
 import Image from "next/image";
 import CustomHeading from "@/components/heading";
-import { howItWorksArray } from "@/constants";
+import { forCampaignBackers, forCampaignCreators, howItWorksArray } from "@/constants";
 import IconCard from "@/components/iconCard";
+import { MeteorCard } from "@/components/meteorCard";
+import { TypewriterCTA } from "@/components/typewriterHeading";
+import { GlobeSection } from "@/components/globeSection";
 
 export default function Home() {
 
@@ -35,16 +38,55 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="whyus" className="py-16 text-center">
+      <section id="customers" className="py-16 text-center">
           <CustomHeading
-            heading="Why choose us?"
-            paragraph="What makes Eachseed different from the others?"
+            heading="Launch sustainable campaigns"
+            paragraph="Turn your sustainability vision into reality. Join a platform designed specifically for impact-driven startups, where passionate supporters are ready to back meaningful projects."
+          />
+
+          <div className="grid grid-cols-4 mt-16 gap-10">
+            { forCampaignCreators.map((k) => (
+              <MeteorCard key={k.heading} heading={k.heading} paragraph={k.paragraph} />
+            ))}
+          </div>
+
+          <TypewriterCTA 
+            heading_sm="Ready to Launch Your Project?"
+            textBlock_one="Join EachSeed"
+            textBlock_two="today and turn your"
+            textBlock_three="sustainable vision into"
+            textBold="Reality."
           />
       </section>
-      <section id="cta" className="py-16 text-center">
 
+      <section id="backers" className="py-16 text-center">
+          <CustomHeading
+            heading="Back projects that matter"
+            paragraph="Join a community of changemakers funding the future of sustainability. Every project you support brings us closer to a more sustainable world."
+          />
+
+          <div className="grid grid-cols-4 mt-16 gap-10">
+            { forCampaignBackers.map((k) => (
+              <MeteorCard key={k.heading} heading={k.heading} paragraph={k.paragraph} />
+            ))}
+          </div>
+
+          <TypewriterCTA 
+            heading_sm="Ready to Make an Impact?"
+            textBlock_one="Discover innovative sustainable"
+            textBlock_two="projects waiting for"
+            textBlock_three="supporters like"
+            textBold="you."
+          />
       </section>
 
+      <section id="cta" className="py-10 text-center">
+            
+            <GlobeSection />
+      </section>
+
+        
     </div>
+    
   );
 }

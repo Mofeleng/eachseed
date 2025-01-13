@@ -8,12 +8,50 @@ export const howItWorksArray = [
     },
     {
         icon: "/icons/handshake.svg",
-        title: " Invest With Confidence",
-        description: "Choose your preferred investment type—equity crowdfunding, green bonds, or revenue sharing. Review detailed project information, including sustainability metrics and expected returns, before making your investment"
+        title: " Support With Confidence",
+        description: "Your impact is tracked every step of the way. Companies receive funding to kickstart their initiatives, while committing to transparent milestone reporting. You'll see exactly how your contribution drives progress through regular updates on achievements."
     },
     {
         icon: "/icons/stats.svg",
         title: "Track Your Impact",
-        description: " Stay updated on the progress of your investments with real-time impact reports. Monitor financial returns and see how your contributions are driving positive environmental and social change"
+        description: " Stay updated on the progress of your funds with real-time impact reports. Monitor campaign progress and see how your contributions are driving positive environmental and social change"
+    }
+]
+
+export const forCampaignCreators = [
+    {
+        heading: "Access Impact-Focused Capital",
+        paragraph: "Connect directly with supporters who share your sustainability vision. Our growing community of backers is specifically interested in funding projects that drive positive environmental and social change"
+    },
+    {
+        heading: "Build Trust Through Verification",
+        paragraph: "Stand out with our verification badge. Our thorough vetting process validates your project's alignment with sustainable development goals, adding credibility and helping you attract serious backers."
+    },
+    {
+        heading: "Simple Project Updates",
+        paragraph: "Keep your supporters engaged with our easy-to-use reporting tools. Share milestone achievements, impact metrics, and project updates through our streamlined dashboard. No complex requirements—just straightforward progress tracking."
+    },
+    {
+        heading: "Simple & Transparent Pricing",
+        paragraph: "Choose the plan that fits your needs. Our basic plan at 5% includes all essential tools to launch and manage your campaign. For growing projects, our premium plan at 8% offers enhanced visibility, advanced analytics, and priority support to maximize your funding potential."
+    }
+]
+
+export const forCampaignBackers = [
+    {
+        heading: "Make Meaningful Impact Support",
+        paragraph: "Support carefully vetted projects that align with global sustainability goals. Every contribution helps innovative startups tackle pressing environmental and social challenges. Choose projects that match your impact priorities."
+    },
+    {
+        heading: "Track Real Progress",
+        paragraph: "Follow your supported projects' journey through clear milestone updates. Get regular insights into how companies are progressing and the impact they're creating. Our transparent reporting keeps you connected to each project's development."
+    },
+    {
+        heading: "Trust Through Verification",
+        paragraph: "Back projects with confidence knowing each one has passed our rigorous vetting process. We verify sustainable development goals alignment, team capability, and project feasibility before any project goes live."
+    },
+    {
+        heading: "Join a Community of Change",
+        paragraph: "Connect with like-minded supporters passionate about sustainability. Share insights. Discover new projects, and be part of a growing movement funding positive change. Together, we're building a more sustainable future."
     }
 ]
