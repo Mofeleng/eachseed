@@ -1,6 +1,7 @@
 "use client";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { bayon } from "../../lib/fonts";
+import CustomLink from "./ui/link";
 
 export function TypewriterCTA({heading_sm, textBlock_one, textBlock_two, textBlock_three, textBold}:{
     heading_sm: string,
@@ -32,8 +33,8 @@ export function TypewriterCTA({heading_sm, textBlock_one, textBlock_two, textBlo
       </p>
       <TypewriterEffectSmooth className={`${bayon.className}`} words={words} />
       <div className="flex flex-row gap-3 justify-center mt-5">
-          <button className="px-4 py-4 rounded-md border border-slate-500 min-w-[170px]" >Browse projects</button>
-          <button className="px-4 py-4 rounded-md bg-[#088C29] text-white min-w-[170px]" >Signup</button>
+        <CustomLink href="/browse" type="secondary">Browse projects</CustomLink>
+        <CustomLink href="/signup">Sign up</CustomLink>
         </div>
     </div>
   );

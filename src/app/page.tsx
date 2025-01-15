@@ -53,7 +53,7 @@ export default function Home() {
 
           <TypewriterCTA 
             heading_sm="Ready to Launch Your Project?"
-            textBlock_one="Join EachSeed"
+            textBlock_one="Join Eachseed"
             textBlock_two="today and turn your"
             textBlock_three="sustainable vision into"
             textBold="Reality."
