@@ -97,3 +97,10 @@ export const backerAccountTypes = [
         name: 'Charity'
     }
 ]
+
+export const categories = [
+    {
+        value: 'SDG1',
+        name: 'Zero hunger'
+    }
+]

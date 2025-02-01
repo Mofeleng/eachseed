@@ -49,6 +49,8 @@ const InvestorSignUp = async () => {
             ))}
           </select>
           
+          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='areasOfInterest' placeholder='Areas of Interest' autoComplete='false'/>
+          
         </div>
       </section>
       
