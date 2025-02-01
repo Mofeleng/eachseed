@@ -6,6 +6,7 @@ import { bayon } from '../../../../../../lib/fonts'
 import CustomHeading from '@/components/heading'
 import { backerAccountTypes, countries } from '@/constants'
 import { option } from 'framer-motion/client'
+import Link from 'next/link'
 
 const InvestorRegistrationSchema = z.object({
     firstNames: z.string().min(2, { message: "Your name must be at least 2 charecters"}),
@@ -30,27 +31,32 @@ const InvestorSignUp = async () => {
 
         <div className='w-[70%] mt-10 mx-auto space-y-4'>
           <h2 className={`${bayon.className} text-4xl`}>Personal information</h2>
-          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='firstNames' placeholder='First names*' autoComplete='false'/>
-          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='lastName' placeholder='Last name*' autoComplete='false'/>
-          <input type="email" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='email' placeholder='Email address*' autoComplete='false'/>
-          <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='password' placeholder='Password*' autoComplete='false'/>
-          <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='confirmPassword' placeholder='Confirm password*' autoComplete='false'/>
+          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='firstNames' placeholder='First names*' autoComplete='false'/>
+          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='lastName' placeholder='Last name*' autoComplete='false'/>
+          <input type="email" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='email' placeholder='Email address*' autoComplete='false'/>
+          <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='password' placeholder='Password*' autoComplete='false'/>
+          <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='confirmPassword' placeholder='Confirm password*' autoComplete='false'/>
 
-          <select name="country" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' id="country">
+          <select name="country" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' id="country">
             { countries.map((i) => (
               <option value={i.value} key={i.value} className='bg-background hover:cursor-pointer'>{i.name}</option>
             ))}
           </select>
           
           <h2 className={`${bayon.className} text-4xl mt-6`}>Account preferences</h2>
-          <select name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md' id="accountType">
+          <select name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' id="accountType">
             { backerAccountTypes.map((k) => (
               <option value={k.value} key={k.value} className='bg-background'>{k.name}</option>
             ))}
           </select>
           
-          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='areasOfInterest' placeholder='Areas of Interest' autoComplete='false'/>
+          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='areasOfInterest' placeholder='Areas of Interest' autoComplete='false'/>
           
+          <div className='!mt-10 space-y-4'>
+            <p className="text-slate-300 text-center">By signing up you agree to our <Link href="/termsofservice" className='text-green-600 underline text-lg'>terms of service</Link> and <Link href="/privacypolicy" className='text-green-600 underline'>Privacy policy.</Link></p>
+            <button type="submit" className='outline-none border-none w-full h-[60px] text-center rounded-md bg-[#088C29] text-bold text-xl'>Sign up</button>
+          </div>
+
         </div>
       </section>
       
