@@ -4,6 +4,8 @@ import React from 'react'
 import { z } from "zod"
 import { bayon } from '../../../../../../lib/fonts'
 import CustomHeading from '@/components/heading'
+import { countries } from '@/constants'
+import { option } from 'framer-motion/client'
 
 const InvestorRegistrationSchema = z.object({
     firstNames: z.string().min(2, { message: "Your name must be at least 2 charecters"}),
@@ -33,10 +35,13 @@ const InvestorSignUp = async () => {
           <input type="email" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='email' placeholder='Email address*' autoComplete='false'/>
           <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='password' placeholder='Password*' autoComplete='false'/>
           <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' name='confirmPassword' placeholder='Confirm password*' autoComplete='false'/>
+
           <select name="country" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' id="country">
-            <option value="ZA" className="bg-black cursor-pointer">South Africa</option>
-            <option value="USA" className='bg-black '>United States of America</option>
+            { countries.map((i) => (
+              <option value={i.value} key={i.value} className='bg-background hover:cursor-pointer'>{i.name}</option>
+            ))}
           </select>
+
         </div>
       </section>
       
