@@ -55,3 +55,18 @@ export const forCampaignBackers = [
         paragraph: "Connect with like-minded supporters passionate about sustainability. Share insights. Discover new projects, and be part of a growing movement funding positive change. Together, we're building a more sustainable future."
     }
 ]
+
+export const countries = [
+    {
+        value: 'ZA',
+        name: 'South Africa'
+    },
+    {
+        value: 'USA',
+        name: 'United States of America'
+    },
+    {
+        value: 'UK',
+        name: 'United Kingdom'
+    }
+]
