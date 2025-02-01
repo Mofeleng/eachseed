@@ -4,7 +4,7 @@ import React from 'react'
 import { z } from "zod"
 import { bayon } from '../../../../../../lib/fonts'
 import CustomHeading from '@/components/heading'
-import { countries } from '@/constants'
+import { backerAccountTypes, countries } from '@/constants'
 import { option } from 'framer-motion/client'
 
 const InvestorRegistrationSchema = z.object({
@@ -42,10 +42,13 @@ const InvestorSignUp = async () => {
             ))}
           </select>
           
-          <h2 className={`${bayon.className} text-4xl`}>Account preferences</h2>
-          <select name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' id="accountType">
-            
+          <h2 className={`${bayon.className} text-4xl mt-6`}>Account preferences</h2>
+          <select name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md' id="accountType">
+            { backerAccountTypes.map((k) => (
+              <option value={k.value} key={k.value} className='bg-background'>{k.name}</option>
+            ))}
           </select>
+          
         </div>
       </section>
       
