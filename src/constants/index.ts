@@ -70,3 +70,22 @@ export const countries = [
         name: 'United Kingdom'
     }
 ]
+
+export const backerAccountTypes = [
+    {
+        value: 'INDIVIDUAL',
+        name: 'Individual'
+    },
+    {
+        value: 'INSTITUTION',
+        name: 'Institution'
+    },
+    {
+        value: 'NONPROFIT',
+        name: 'Non-profit organisation',
+    },
+    {
+        value: 'CHARITY',
+        name: 'Charity'
+    }
+]

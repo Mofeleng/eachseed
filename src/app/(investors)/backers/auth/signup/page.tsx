@@ -41,7 +41,11 @@ const InvestorSignUp = async () => {
               <option value={i.value} key={i.value} className='bg-background hover:cursor-pointer'>{i.name}</option>
             ))}
           </select>
-
+          
+          <h2 className={`${bayon.className} text-4xl`}>Account preferences</h2>
+          <select name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent  rounded-md' id="accountType">
+            
+          </select>
         </div>
       </section>
       
