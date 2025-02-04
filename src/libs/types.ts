@@ -18,12 +18,14 @@ export const formSchema = z.object({
 })
 
 export type FormFieldProps = {
+    fieldType: validFieldTypes;
     type: string;
     name: validFieldNames;
     placeholder:string;
     value:string;
-    onchange: (e:React.ChangeEvent<HTMLInputElement>) => void;
+    onchange: (e:React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
     error?:string;
 }
 
 export type validFieldNames = "firstName" | "lastName" | "email" | "password" | "confirmPassword" | "country" | "accountTypes" | "areasOfInterest"
+export type validFieldTypes = "TEXT" | "SELECT"
