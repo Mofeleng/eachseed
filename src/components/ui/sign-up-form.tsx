@@ -1,12 +1,25 @@
-import React from 'react'
+"use client"
+
+import React, { useState} from 'react'
 import { bayon } from '../../../lib/fonts'
 import Link from 'next/link'
+import FormField from './form-field'
+import { FormFieldProps } from '@/libs/types'
 
 const SignUpForm = () => {
+    const [ formData, setFormData ] = useState({
+        firstNames: "",
+        lastName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        country: "",
+        accountType: "",
+        areasOfInterest: [""]
+    })
   return (
     <form className='w-[70%] mt-10 mx-auto space-y-4'>
         <h2 className={`${bayon.className} text-4xl`}>Personal information</h2>
-
 
         <div className='!mt-10 space-y-4'>
             <p className="text-slate-300 text-center">By signing up you agree to our <Link href="/termsofservice" className='text-green-600 underline text-lg'>terms of service</Link> and <Link href="/privacypolicy" className='text-green-600 underline'>Privacy policy.</Link></p>
