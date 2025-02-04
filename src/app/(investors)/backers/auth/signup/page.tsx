@@ -1,63 +1,65 @@
-"use server"
 
 import React from 'react'
 import { z } from "zod"
 import { bayon } from '../../../../../../lib/fonts'
-import CustomHeading from '@/components/heading'
 import { backerAccountTypes, countries } from '@/constants'
-import { option } from 'framer-motion/client'
 import Link from 'next/link'
 
-const InvestorRegistrationSchema = z.object({
-    firstNames: z.string().min(2, { message: "Your name must be at least 2 charecters"}),
-    lastName: z.string().min(2, { message: "Your last name must be at least 2 charecters"}),
-    email: z.string().email({ message: "Please enter a valid email address"}),
-    password: z.string().min(8, {message: "Password must be at least 8 charecters"}),
-    country: z.string().min(2, { message: "Country must be at least 2 charecters"}),
-    accountType: z.string(),
-    AreasOfInterest: z.array(z.string()),
+import { SubmitHandler, useForm } from 'react-hook-form'
 
-})
+type FormFields = {
+  firstNames: string;
+  lastName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  country: string;
+  accountType: string;
+  areasOfInterest: [string]
+}
 
-const InvestorSignUp = async () => {
 
-     
+const InvestorSignUp = () => {
+
+  const { register, handleSubmit } = useForm<FormFields>()
+
+  const onSubmit: SubmitHandler<FormFields> = (data) => {
+    console.log(data)
+  }
   return (
     <div className="container mx-auto sm:px-5">
       <section className="py-16">
-        <div className="text-center">
-          <CustomHeading heading='Your future in a sustainable world begins here' paragraph='Sign up to get access to projects that will shape our future'/>
-        </div>
+        
 
-        <div className='w-[70%] mt-10 mx-auto space-y-4'>
+        <form className='w-[70%] mt-10 mx-auto space-y-4' onSubmit={handleSubmit(onSubmit)}>
           <h2 className={`${bayon.className} text-4xl`}>Personal information</h2>
-          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='firstNames' placeholder='First names*' autoComplete='false'/>
-          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='lastName' placeholder='Last name*' autoComplete='false'/>
-          <input type="email" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='email' placeholder='Email address*' autoComplete='false'/>
-          <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='password' placeholder='Password*' autoComplete='false'/>
-          <input type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='confirmPassword' placeholder='Confirm password*' autoComplete='false'/>
+          <input {...register("firstNames")} type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='firstNames' placeholder='First names*' autoComplete='false'/>
+          <input {...register("lastName")} type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='lastName' placeholder='Last name*' autoComplete='false'/>
+          <input {...register("email")} type="email" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='email' placeholder='Email address*' autoComplete='false'/>
+          <input {...register("password")} type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='password' placeholder='Password*' autoComplete='false'/>
+          <input {...register("confirmPassword")} type="password" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='confirmPassword' placeholder='Confirm password*' autoComplete='false'/>
 
-          <select name="country" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' id="country">
+          <select {...register("country")} name="country" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' id="country">
             { countries.map((i) => (
               <option value={i.value} key={i.value} className='bg-background hover:cursor-pointer'>{i.name}</option>
             ))}
           </select>
           
           <h2 className={`${bayon.className} text-4xl mt-6`}>Account preferences</h2>
-          <select name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' id="accountType">
+          <select {...register("accountType")} name="accountType" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' id="accountType">
             { backerAccountTypes.map((k) => (
               <option value={k.value} key={k.value} className='bg-background'>{k.name}</option>
             ))}
           </select>
           
-          <input type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='areasOfInterest' placeholder='Areas of Interest' autoComplete='false'/>
+          <input {...register("areasOfInterest")} type="text" className='w-full h-[60px] outline-none border border-slate-300 bg-transparent rounded-md pl-4' name='areasOfInterest' placeholder='Areas of Interest' autoComplete='false'/>
           
           <div className='!mt-10 space-y-4'>
             <p className="text-slate-300 text-center">By signing up you agree to our <Link href="/termsofservice" className='text-green-600 underline text-lg'>terms of service</Link> and <Link href="/privacypolicy" className='text-green-600 underline'>Privacy policy.</Link></p>
             <button type="submit" className='outline-none border-none w-full h-[60px] text-center rounded-md bg-[#088C29] text-bold text-xl'>Sign up</button>
           </div>
 
-        </div>
+        </form>
       </section>
       
     </div>
