@@ -27,5 +27,5 @@ export type FormFieldProps = {
     error?:string;
 }
 
-export type validFieldNames = "firstName" | "lastName" | "email" | "password" | "confirmPassword" | "country" | "accountTypes" | "areasOfInterest"
+export type validFieldNames = "firstNames" | "lastName" | "email" | "password" | "confirmPassword" | "country" | "accountTypes" | "areasOfInterest"
 export type validFieldTypes = "TEXT" | "SELECT"

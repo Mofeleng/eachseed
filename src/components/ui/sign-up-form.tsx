@@ -44,6 +44,12 @@ const SignUpForm = () => {
     <form className='w-[70%] mt-10 mx-auto space-y-4' onSubmit={handleSubmit}>
         <h2 className={`${bayon.className} text-4xl`}>Personal information</h2>
 
+        <FormField fieldType='TEXT' type='text' placeholder='First names' name='firstNames' value={formData.firstNames} onchange={handleChange} error={errors.firstNames} />
+        <FormField fieldType='TEXT' type='text' placeholder='Last name' name='lastName' value={formData.lastName} onchange={handleChange} error={errors.lastName} />
+        <FormField fieldType='TEXT' type='email' placeholder='Email' name='email' value={formData.email} onchange={handleChange} error={errors.email} />
+        <FormField fieldType='TEXT' type='password' placeholder='Password' name='password' value={formData.password} onchange={handleChange} error={errors.password} />
+        <FormField fieldType='TEXT' type='password' placeholder='Confirm password' name='confirmPassword' value={formData.confirmPassword} onchange={handleChange} error={errors.confirmPassword} />
+        <FormField fieldType='SELECT' type='select' placeholder='Select country' name='country' value={formData.country} onchange={handleChange} error={errors.country} />
 
         <div className='!mt-10 space-y-4'>
             <p className="text-slate-300 text-center">By signing up you agree to our <Link href="/termsofservice" className='text-green-600 underline text-lg'>terms of service</Link> and <Link href="/privacypolicy" className='text-green-600 underline'>Privacy policy.</Link></p>
