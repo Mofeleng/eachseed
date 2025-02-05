@@ -22,7 +22,7 @@ export type FormFieldProps = {
     type: string;
     name: validFieldNames;
     placeholder:string;
-    value:string;
+    value:string | string[];
     onchange: (e:React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
     error?:string;
 }

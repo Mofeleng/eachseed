@@ -21,6 +21,7 @@ const FormField: React.FC<FormFieldProps> = ({
                     <option value={i.value} key={i.value} className='bg-background hover:cursor-pointer'>{i.name}</option>
                 ))}
             </>
+            break
 
         case 'accountTypes':
             optionOutput = <>
@@ -28,6 +29,7 @@ const FormField: React.FC<FormFieldProps> = ({
                     <option value={k.value} key={k.value} className='bg-background'>{k.name}</option>
                 ))}
             </>
+            break
     }
 
     switch (fieldType) {
