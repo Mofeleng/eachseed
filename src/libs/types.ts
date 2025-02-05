@@ -1,7 +1,7 @@
 import { z } from "zod"
 
 export const formSchema = z.object({
-    firstName: z.string().min(2, "First name should be at least 2 charecters long"),
+    firstNames: z.string().min(2, "First name should be at least 2 charecters long"),
     lastName: z.string().min(2, "Last name should be at least 2 charecters long"),
     email: z.string().email("Please enter a valid email"),
     password: z.string()
