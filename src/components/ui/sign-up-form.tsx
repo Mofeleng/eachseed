@@ -52,7 +52,7 @@ const SignUpForm = () => {
         <FormField fieldType='SELECT' type='select' placeholder='Select country' name='country' value={formData.country} onchange={handleChange} error={errors.country} />
 
         <h2 className={`${bayon.className} text-4xl`}>Account preferences</h2>
-        <FormField fieldType='SELECT' type='select' placeholder='Account type' name='accountTypes' value={formData.accountType} onchange={handleChange} error={errors.accountType} />
+        <FormField fieldType='SELECT' type='select' placeholder='Account type' name='accountType' value={formData.accountType} onchange={handleChange} error={errors.accountType} />
         <FormField fieldType='TEXT' type='text' placeholder='Areas of interest' name='areasOfInterest' value={formData.areasOfInterest} onchange={handleChange} error={errors.areasOfInterest} />
 
         <div className='!mt-10 space-y-4'>

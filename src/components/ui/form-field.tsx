@@ -1,4 +1,4 @@
-import { backerAccountTypes, countries } from '@/constants'
+import { backeraccountType, countries } from '@/constants'
 import { FormFieldProps } from '@/libs/types'
 import React from 'react'
 
@@ -23,9 +23,9 @@ const FormField: React.FC<FormFieldProps> = ({
             </>
             break
 
-        case 'accountTypes':
+        case 'accountType':
             optionOutput = <>
-                { backerAccountTypes.map((k) => (
+                { backeraccountType.map((k) => (
                     <option value={k.value} key={k.value} className='bg-background'>{k.name}</option>
                 ))}
             </>

@@ -58,7 +58,7 @@ export const forCampaignBackers = [
 
 export const countries = [
     {
-        value: 'ZA',
+        value: "",
         name: 'Country of residence'
     },
     {
@@ -75,9 +75,9 @@ export const countries = [
     }
 ]
 
-export const backerAccountTypes = [
+export const backeraccountType = [
     {
-        value: 'INDIVIDUAL',
+        value: "",
         name: 'Account type',
     },
     {

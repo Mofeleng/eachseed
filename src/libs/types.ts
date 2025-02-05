@@ -11,7 +11,7 @@ export const formSchema = z.object({
     confirmPassword: z.string(),
     country: z.string(),
     accountType: z.string(),
-    areasOfInterest: z.string().array()
+    areasOfInterest: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]
@@ -27,5 +27,5 @@ export type FormFieldProps = {
     error?:string;
 }
 
-export type validFieldNames = "firstNames" | "lastName" | "email" | "password" | "confirmPassword" | "country" | "accountTypes" | "areasOfInterest"
+export type validFieldNames = "firstNames" | "lastName" | "email" | "password" | "confirmPassword" | "country" | "accountType" | "areasOfInterest"
 export type validFieldTypes = "TEXT" | "SELECT"
