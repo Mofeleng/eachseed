@@ -1,5 +1,5 @@
 
-import SignUpForm from '@/components/ui/sign-up-form'
+import SignUpForm from '@/components/auth/sign-up-form'
 import React from 'react'
 
 const InvestorSignUp = () => {

@@ -3,7 +3,7 @@
 import React, { useState} from 'react'
 import { bayon } from '../../../lib/fonts'
 import Link from 'next/link'
-import FormField from './form-field'
+import FormField from '../ui/form-field'
 import { FormFieldProps, formSchema } from '@/libs/types'
 
 const SignUpForm = () => {
