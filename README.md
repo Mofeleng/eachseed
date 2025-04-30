@@ -1,6 +1,6 @@
 # Eachseed Platform
 
-Welcome to the Eachseed Platform! This guide will help you get started with the project, even if you're new to coding. We'll walk through everything step by step.
+Welcome to the Eachseed Platform! This guide will help you get started with the project. We'll walk through everything step by step.
 
 ## 🚀 Getting Started
 
@@ -100,6 +100,5 @@ Now you're ready to start the application:
 If you run into any problems:
 - Check that all the prerequisites are installed correctly
 - Make sure you've followed each step carefully
-- Ask a teammate for help - we're all here to support each other!
-
+- Some code tutorials from The Net Ninja (on Youtube) may be helpful
 Happy coding! 🚀
